@@ -1,0 +1,72 @@
+@import '../general.scss';
+
+.current_post {
+
+    &-body {
+
+        &-title {
+            margin: 0;
+            padding: 8px 16px;
+            font-size: 20px;
+        }
+
+        &-description {
+            width: calc(100%- 32px);
+            margin: 0;
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+    }
+
+    &-comments {
+        margin-top: 12px;
+        padding: 16px;
+
+        &-header {
+            margin: 0;
+            font-size: 20px;
+            padding-bottom: 4px;
+        }
+
+        &-comment {
+            margin-top: 12px;
+            padding: 0 16px;
+
+            &-author {
+                font-size: 16px;
+            }
+
+            &-description {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-pagination {
+        padding: 16px 24px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+
+        &-link {
+            max-width: 120px;
+            margin: 0;
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden; 
+            text-overflow: ellipsis;
+
+            a {
+                cursor: pointer;
+                user-select: none;
+                color: $link;
+                text-decoration: none;
+
+                &.-disabled {
+                    cursor: default;
+                    color: $disabled;
+                }
+            }
+        }
+    }
+}
